@@ -49,6 +49,8 @@
 
 **Awesome Books** is a project to showcase books arrangement using javascript 
 
+<br/>
+
 ## 🛠 Built With <a name="built-with"></a>
 
 ### Tech Stack <a name="tech-stack"></a>
@@ -166,7 +168,7 @@ There are no test available for this project.
 - LinkedIn: [@CristianVilla](https://www.linkedin.com/in/cristian-villa-5b518127b/)
 
 
-
+<br/>
 
 <!-- FUTURE FEATURES -->
 
