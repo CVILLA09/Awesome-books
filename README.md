@@ -46,14 +46,14 @@
 
 <!-- PROJECT DESCRIPTION -->
 
-# 📖 About the project: <a name="about-project"></a>
+# 📖 About the project <a name="about-project"></a>
 
 
 **Awesome Books** is a project to showcase books arrangement using javascript 
 
 <br/>
 
-## 🛠 Built With: <a name="built-with"></a>
+## 🛠 Built With <a name="built-with"></a>
 
 ### Tech Stack <a name="tech-stack"></a>
 
@@ -70,7 +70,7 @@
 
 <!-- Features -->
 
-### Key Features: <a name="key-features"></a>
+### Key Features <a name="key-features"></a>
 
 
 - **Landing Page for activities**
@@ -155,7 +155,7 @@ There are no test available for this project.
 
 <!-- AUTHORS -->
 
-## 👥 Authors: <a name="authors"></a>
+## 👥 Authors <a name="authors"></a>
 
 
 
