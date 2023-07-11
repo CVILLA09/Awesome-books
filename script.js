@@ -45,12 +45,12 @@ function displayBooks() {
     const removeButton = document.createElement('button');
     removeButton.textContent = 'Remove';
     // Use an IIFE to create a new scope for each iteration of the loop
-    (function(index) {
+    ((index, books) => {
       removeButton.addEventListener('click', () => {
         removeBook(books[index].id); // Remove the book when the button is clicked
         displayBooks(); // Update the book list
       });
-    })(i);
+    })(i, books);
     bookDiv.appendChild(removeButton);
 
     // Create and append a horizontal line for separation
