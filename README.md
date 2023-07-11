@@ -54,7 +54,7 @@
 ### Tech Stack <a name="tech-stack"></a>
 
 <details>
-  <summary>Client</summary>
+  <summary>Click</summary>
   <ul>
     <li><a href="https://www.w3.org/TR/2011/WD-html5-20110405/">HTML5</a></li>
     <li><a href="https://www.w3.org/Style/CSS/specs.en.html">CSS</a></li>
