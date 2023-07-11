@@ -42,6 +42,8 @@
 - [❓ FAQ (OPTIONAL)](#faq)
 - [📝 License](#license)
 
+<br/>
+
 <!-- PROJECT DESCRIPTION -->
 
 # 📖 [Awesome Books] <a name="about-project"></a>
