@@ -53,7 +53,7 @@
 
 <br/>
 
-## 🛠 Built With <a name="built-with"></a>
+## 🛠 Built With: <a name="built-with"></a>
 
 ### Tech Stack <a name="tech-stack"></a>
 
@@ -70,7 +70,7 @@
 
 <!-- Features -->
 
-### Key Features <a name="key-features"></a>
+### Key Features: <a name="key-features"></a>
 
 
 - **Landing Page for activities**
@@ -82,7 +82,7 @@
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-## 🚀 Live Demo <a name="live-demo"></a>
+## 🚀 Live Demo: <a name="live-demo"></a>
 
 
 - [Live Demo Link]()
@@ -155,7 +155,7 @@ There are no test available for this project.
 
 <!-- AUTHORS -->
 
-## 👥 Authors <a name="authors"></a>
+## 👥 Authors: <a name="authors"></a>
 
 
 
@@ -174,7 +174,7 @@ There are no test available for this project.
 
 <!-- FUTURE FEATURES -->
 
-## 🔭 Future Features <a name="future-features"></a>
+## 🔭 Future Features: <a name="future-features"></a>
 
 
 Future changes:
