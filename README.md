@@ -46,7 +46,7 @@
 
 <!-- PROJECT DESCRIPTION -->
 
-# 📖 [Awesome Books] <a name="about-project"></a>
+# 📖 About the project: <a name="about-project"></a>
 
 
 **Awesome Books** is a project to showcase books arrangement using javascript 
