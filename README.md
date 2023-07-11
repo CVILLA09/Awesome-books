@@ -151,7 +151,7 @@ There are no test available for this project.
 
 <!-- AUTHORS -->
 
-## 👥 Author <a name="authors"></a>
+## 👥 Authors <a name="authors"></a>
 
 
 
