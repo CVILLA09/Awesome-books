@@ -36,7 +36,7 @@ class BooksCollection {
     const bookList = document.getElementById('book-list');
     bookList.innerHTML = '';
 
-    this.books.forEach((book, index) => {
+    this.books.forEach((book) => {
       const bookDiv = document.createElement('div');
       const titleElement = document.createElement('p');
       titleElement.textContent = `"${book.title}" by`;
