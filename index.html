@@ -5,19 +5,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Awesome Books</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <div id="main-container">
-        <h1>Awesome Books</h1>
-        <div id="book-list">
+    <div id="main-container" class="main-container">
+        <h1 class="main-title">All awesome books</h1>
+        <div id="book-list" class="book-list">
             <!-- Books will be added here -->
         </div>
         <br />
-        <form id="book-form">
+        <hr>
+        <h2 class="secondary-title">Add a new book</h2>
+        <form id="book-form" class="book-form">
             <input type="text" id="title" placeholder="Title" required>
             <input type="text" id="author" placeholder="Author" required>
-            <button type="submit">Add</button>
+            <button type="submit" class="add-button">Add</button>
         </form>
     </div>
     <script src="script.js"></script>
