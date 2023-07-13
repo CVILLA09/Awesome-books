@@ -61,7 +61,7 @@ nav {
 .main-container {
   width: 90%;
   margin: auto;
-  margin-top: 16vh; 
+  margin-top: 16vh;
   left: 5%;
   right: 5%;
 }
@@ -122,7 +122,7 @@ nav {
 .second-container {
   width: 90%;
   margin: auto;
-  margin-top: 16vh; 
+  margin-top: 16vh;
   left: 5%;
   right: 5%;
   display: none;
@@ -179,7 +179,7 @@ nav {
   width: 90%;
   height: 60%;
   margin: auto;
-  margin-top: 16vh; 
+  margin-top: 16vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -189,7 +189,7 @@ nav {
 }
 
 .contact-info-content {
-  text-align: start; 
+  text-align: start;
   line-height: 1.5;
   width: 80%; /* Adjust this value as per your needs */
   margin-left: 20vw;
