@@ -77,17 +77,6 @@ form.addEventListener('submit', (event) => {
   document.getElementById('author').value = '';
 });
 
-// Display the books and the first section when the page loads
-window.onload = () => {
-  myBooks.displayBooks();
-  showSection('main-container'); // Show the first section
-};
-
-// Display the navigation links when clicked
-
-// Select all navigation links
-const navLinks = document.querySelectorAll('.nav-link');
-
 // Function to show a section and hide the others
 function showSection(sectionId) {
   // Select all sections
@@ -103,6 +92,11 @@ function showSection(sectionId) {
   sectionToShow.style.display = 'block'; // Use inline styles to show the section
 }
 
+// Display the navigation links when clicked
+
+// Select all navigation links
+const navLinks = document.querySelectorAll('.nav-link');
+
 // Add event listeners to the navigation links
 navLinks.forEach((link) => {
   link.addEventListener('click', (event) => {
@@ -115,3 +109,8 @@ navLinks.forEach((link) => {
   });
 });
 
+// Display the books and the first section when the page loads
+window.onload = () => {
+  myBooks.displayBooks();
+  showSection('main-container'); // Show the first section
+};
