@@ -44,6 +44,13 @@
 </details>
 
 <details>
+  <summary>Styles</summary>
+  <ul>
+    <li><a href="https://www.w3schools.com/css/">CSS</a></li>
+  </ul>
+</details>
+
+<details>
   <summary>Scripting</summary>
   <ul>
     <li><a href="https://www.w3schools.com/js/">JavaScript</a></li>
