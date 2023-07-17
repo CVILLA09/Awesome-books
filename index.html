@@ -2,54 +2,56 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Awesome Books</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/app.js" defer></script>
+  <title>Awesome books</title>
 </head>
 
 <body>
-    <header>
-        <nav>
-            <p class="header-title">Awesome books</p>
-            <ul id="navbar" class="navbar">
-                <li><a href="#" class="nav-link" data-section="main-container">List</a></li>
-                <li class="separator">|</li>
-                <li><a href="#" class="nav-link" data-section="second-container">Add new</a></li>
-                <li class="separator">|</li>
-                <li><a href="#" class="nav-link" data-section="contact-info">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
-    <section id="main-container" class="main-container">
-        <h1 class="main-title">All awesome books</h1>
-        <div id="book-list" class="book-list">
-            <!-- Books will be added here -->
-        </div>
-    </section>
-    <section id="second-container" class="second-container hidden">
-        <h2 class="secondary-title">Add a new book</h2>
-        <form id="book-form" class="book-form">
-            <input type="text" id="title" placeholder="Title" required>
-            <input type="text" id="author" placeholder="Author" required>
-            <button type="submit" class="add-button">Add</button>
-        </form>
-    </section>
-    <section id="contact-info" class="contact-info hidden">
-        <div class="contact-info-content">
-            <h1>Contact Information</h1>
-            <p>Do you have questions or you just want to say "Hello"? <br />You can reach out to us!</p>
-            <ul>
-                <li>Our email: mail@mail.com</li>
-                <li>Our phone number: 0043586534422</li>
-                <li>Our address: Streetname 22, 84503 City, Country</li>
-            </ul>
-        </div>
-    </section>
-    <footer>
-        <p>Copyright &copy; 2023</p>
-    </footer>
-    <script src="script.js"></script>
+  <header>
+    <nav>
+      <p class="header-title">Awesome books</p>
+      <ul id="navbar" class="navbar">
+        <li><a href="#" class="nav-link" data-section="book-list">List</a></li>
+        <li class="separator">|</li>
+        <li><a href="#" class="nav-link" data-section="add-book-form">Add new</a></li>
+        <li class="separator">|</li>
+        <li><a href="#" class="nav-link" data-section="contact-info">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div id="book-list" class="main-container">
+    <h1 class="main-title">All awesome books</h1>
+    <div class="books-collection book-list"></div>
+  </div>
+
+  <div id="add-book-form" class="second-container hidden">
+    <h2 class="secondary-title">Add a new book</h2>
+    <form class="form book-form">
+      <input type="text" placeholder="Title" class="title-tag" required>
+      <input type="text" placeholder="Author" class="author-tag" required>
+      <button type="submit" class="add-button">Add</button>
+    </form>
+  </div>
+
+  <div id="contact-info" class="contact-info hidden">
+    <div class="contact-info-content">
+      <h1>Contact Information</h1>
+      <p>Do you have questions or you just want to say "Hello"? <br />You can reach out to us!</p>
+      <ul>
+        <li>Our email: mail@mail.com</li>
+        <li>Our phone number: 0043586534422</li>
+        <li>Our address: Streetname 22, 84503 City, Country</li>
+      </ul>
+    </div>
+  </div>
+
+  <footer>
+    <p>Copyright &copy; 2023</p>
+  </footer>
 </body>
 
 </html>

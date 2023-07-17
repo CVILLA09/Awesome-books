@@ -1,116 +1,114 @@
-/* eslint max-classes-per-file: ["error", 2] */
+// Declare booksCollection as an empty array
+let books = [];
 
-// Book class to represent individual books
 class Book {
-  constructor(id, title, author) {
-    this.id = id;
+  constructor(title, author) {
     this.title = title;
     this.author = author;
   }
+
+  // Function to save the books collection to localStorage
+  static saveBooksToStorage() {
+    localStorage.setItem('books', JSON.stringify(books));
+  }
+
+  // Function to add a new book to the collection
+  addBook() {
+    books.push(this);
+    Book.saveBooksToStorage();
+  }
+
+  // Function to remove a book from the collection
+  static removeBook(title) {
+    books = books.filter((book) => book.title !== title);
+    Book.saveBooksToStorage();
+  }
 }
 
-// BooksCollection class to manage the collection of books
-class BooksCollection {
-  constructor() {
-    this.books = JSON.parse(localStorage.getItem('books')) || [];
-    this.idCounter = JSON.parse(localStorage.getItem('idCounter')) || 0;
-  }
+// Function to retrieve the books collection from localStorage
+const retrieveBooksFromStorage = () => {
+  const storedBooks = localStorage.getItem('books');
+  books = storedBooks ? JSON.parse(storedBooks) : [];
+};
 
-  // Method to add a book to the books array and update localStorage
-  addBook(title, author) {
-    const book = new Book(this.idCounter, title, author);
-    this.books.push(book);
-    this.idCounter += 1;
-    localStorage.setItem('books', JSON.stringify(this.books));
-    localStorage.setItem('idCounter', JSON.stringify(this.idCounter));
-  }
+// Function to display all books in the collection
+const displayBooks = () => {
+  const booksContainer = document.querySelector('.books-collection');
+  booksContainer.innerHTML = '';
 
-  // Method to remove a book from the books array and update localStorage
-  removeBook(id) {
-    this.books = this.books.filter((book) => book.id !== id);
-    localStorage.setItem('books', JSON.stringify(this.books));
-  }
+  books.forEach((book) => {
+    const bookCard = document.createElement('div');
+    const titleElement = document.createElement('p');
+    titleElement.textContent = `"${book.title}" by`;
+    bookCard.appendChild(titleElement);
 
-  // Method to display the books on the page
-  displayBooks() {
-    const bookList = document.getElementById('book-list');
-    bookList.innerHTML = '';
+    const authorElement = document.createElement('span');
+    authorElement.textContent = ` ${book.author}`; // Notice the space before ${book.author}
+    titleElement.appendChild(authorElement);
 
-    this.books.forEach((book) => {
-      const bookDiv = document.createElement('div');
-      const titleElement = document.createElement('p');
-      titleElement.textContent = `"${book.title}" by`;
-      bookDiv.appendChild(titleElement);
-
-      const authorElement = document.createElement('span');
-      authorElement.textContent = ` ${book.author}`; // Notice the space before ${book.author}
-      titleElement.appendChild(authorElement);
-
-      const removeButton = document.createElement('button');
-      removeButton.textContent = 'Remove';
-      removeButton.addEventListener('click', () => {
-        this.removeBook(book.id);
-        this.displayBooks();
-      });
-      bookDiv.appendChild(removeButton);
-
-      bookList.appendChild(bookDiv);
+    const removeButton = document.createElement('button');
+    removeButton.textContent = 'Remove';
+    removeButton.addEventListener('click', () => {
+      Book.removeBook(book.title);
+      bookCard.remove();
     });
-  }
-}
+    bookCard.appendChild(removeButton);
 
-// Instantiate BooksCollection
-const myBooks = new BooksCollection();
+    booksContainer.appendChild(bookCard);
+  });
+};
 
-// Add an event listener to the form to add a book when the form is submitted
-const form = document.getElementById('book-form');
-form.addEventListener('submit', (event) => {
+// Function to handle navigation
+const handleNavigation = (event) => {
   event.preventDefault();
+  const targetSection = event.target.dataset.section;
+  const sections = document.querySelectorAll('.main-container, .second-container, .contact-info');
 
-  const title = document.getElementById('title').value;
-  const author = document.getElementById('author').value;
-
-  myBooks.addBook(title, author);
-  myBooks.displayBooks();
-
-  document.getElementById('title').value = '';
-  document.getElementById('author').value = '';
-});
-
-// Function to show a section and hide the others
-function showSection(sectionId) {
-  // Select all sections
-  const sections = document.querySelectorAll('section');
-
-  // Hide all sections
   sections.forEach((section) => {
-    section.style.display = 'none'; // Use inline styles to hide the sections
+    section.classList.add('hidden');
+    if (section.id === targetSection) {
+      section.classList.remove('hidden');
+    }
   });
 
-  // Show the section with the given id
-  const sectionToShow = document.getElementById(sectionId);
-  sectionToShow.style.display = 'block'; // Use inline styles to show the section
-}
+  // Remove active class from all nav links
+  const navLinks = document.querySelectorAll('.nav-link');
+  navLinks.forEach((link) => {
+    link.classList.remove('active');
+  });
 
-// Display the navigation links when clicked
-
-// Select all navigation links
-const navLinks = document.querySelectorAll('.nav-link');
+  // Add active class to the clicked nav link
+  event.target.classList.add('active');
+};
 
 // Add event listeners to the navigation links
+const navLinks = document.querySelectorAll('.nav-link');
 navLinks.forEach((link) => {
-  link.addEventListener('click', (event) => {
-    // Prevent the default action
-    event.preventDefault();
-
-    // Show the section that corresponds to the clicked link
-    const sectionId = event.target.getAttribute('data-section');
-    showSection(sectionId);
-  });
+  link.addEventListener('click', handleNavigation);
 });
 
-// Display the books and the first section when the page loads
-window.onload = () => {
-  myBooks.displayBooks();
-  showSection('main-container'); // Show the first section
-};
+// Form submit event handler
+const form = document.querySelector('.form');
+form.addEventListener('submit', (e) => {
+  e.preventDefault();
+
+  const titleInput = document.querySelector('.title-tag');
+  const authorInput = document.querySelector('.author-tag');
+
+  const title = titleInput.value;
+  const author = authorInput.value;
+
+  const book = new Book(title, author);
+  book.addBook();
+
+  displayBooks();
+
+  titleInput.value = '';
+  authorInput.value = '';
+});
+
+// Retrieve books collection from localStorage on page load
+retrieveBooksFromStorage();
+
+// Initial display of books
+displayBooks();
