@@ -5,7 +5,6 @@ import { handleNavigation } from './modules/navigation.js';
 import { displayDate } from './modules/date.js';
 
 document.addEventListener('DOMContentLoaded', () => {
-  console.log("DOM fully loaded and parsed");
   // Declare booksCollection as an empty array
   const books = retrieveBooksFromStorage();
 

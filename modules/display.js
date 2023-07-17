@@ -28,4 +28,3 @@ const displayBooks = (books) => {
 };
 
 export { displayBooks };
-console.log("Display module loaded");

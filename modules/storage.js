@@ -10,4 +10,3 @@ const retrieveBooksFromStorage = () => {
 };
 
 export { saveBooksToStorage, retrieveBooksFromStorage };
-console.log("Storage module loaded");

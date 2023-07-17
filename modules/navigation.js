@@ -24,4 +24,3 @@ const handleNavigation = (event) => {
 };
 
 export { handleNavigation };
-console.log('Navigation module loaded');

@@ -21,4 +21,3 @@ class Book {
 }
 
 export default Book;
-console.log("Book module loaded");

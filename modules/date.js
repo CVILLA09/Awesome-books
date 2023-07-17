@@ -6,4 +6,3 @@ const displayDate = () => {
 };
 
 export { displayDate };
-console.log('Date module loaded');
