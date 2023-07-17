@@ -7,9 +7,6 @@
   <h1><b>Welcome to our project!</b></h1>
 
 </div>
-
-
-<div align="center">
   
   <br/>
 
