@@ -1,8 +1,6 @@
 <a name="readme-top"></a>
 
 <div align="center">
-  <img src="moshed.svg" alt="logo" width="140"  height="auto" />
-  <br/>
 
   <h1><b>Welcome to our project!</b></h1>
 
