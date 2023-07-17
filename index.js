@@ -1,37 +1,44 @@
-import Book from './book.js';
-import { saveBooksToStorage, retrieveBooksFromStorage } from './storage.js';
-import { displayBooks } from './display.js';
-import { handleNavigation } from './navigation.js';
+import Book from './modules/book.js';
+import { saveBooksToStorage, retrieveBooksFromStorage } from './modules/storage.js';
+import { displayBooks } from './modules/display.js';
+import { handleNavigation } from './modules/navigation.js';
+import { displayDate } from './modules/date.js';
 
-// Declare booksCollection as an empty array
-let books = retrieveBooksFromStorage();
+document.addEventListener('DOMContentLoaded', () => {
+  console.log("DOM fully loaded and parsed");
+  // Declare booksCollection as an empty array
+  const books = retrieveBooksFromStorage();
 
-// Add event listeners to the navigation links
-const navLinks = document.querySelectorAll('.nav-link');
-navLinks.forEach((link) => {
-  link.addEventListener('click', handleNavigation);
-});
+  // Function to display the date
+  displayDate();
 
-// Form submit event handler
-const form = document.querySelector('.form');
-form.addEventListener('submit', (e) => {
-  e.preventDefault();
+  // Add event listeners to the navigation links
+  const navLinks = document.querySelectorAll('.nav-link');
+  navLinks.forEach((link) => {
+    link.addEventListener('click', handleNavigation);
+  });
 
-  const titleInput = document.querySelector('.title-tag');
-  const authorInput = document.querySelector('.author-tag');
+  // Form submit event handler
+  const form = document.querySelector('.form');
+  form.addEventListener('submit', (e) => {
+    e.preventDefault();
 
-  const title = titleInput.value;
-  const author = authorInput.value;
+    const titleInput = document.querySelector('.title-tag');
+    const authorInput = document.querySelector('.author-tag');
 
-  const book = new Book(title, author);
-  book.addBook(books);
-  saveBooksToStorage(books);
+    const title = titleInput.value;
+    const author = authorInput.value;
 
+    const book = new Book(title, author);
+    book.addBook(books);
+    saveBooksToStorage(books);
+
+    displayBooks(books);
+
+    titleInput.value = '';
+    authorInput.value = '';
+  });
+
+  // Initial display of books
   displayBooks(books);
-
-  titleInput.value = '';
-  authorInput.value = '';
 });
-
-// Initial display of books
-displayBooks(books);

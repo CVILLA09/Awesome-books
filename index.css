@@ -12,6 +12,7 @@ header {
   padding: 20px;
   margin: 0;
   margin-top: 1vh;
+  margin-bottom: 1vh;
   width: 90%;
   height: 4vh;
   font-size: 30px;
@@ -53,6 +54,16 @@ nav {
 .separator {
   height: auto;
   font-weight: bolder;
+}
+
+.date {
+  position: fixed;
+  top: 3;
+  right: 0;
+  margin-top: 6vh;
+  margin-right: 5vw;
+  font-size: 20px;
+  font-weight: bold;
 }
 
 .main-container {
