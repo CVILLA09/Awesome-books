@@ -40,4 +40,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Initial display of books
   displayBooks(books);
+
+  // Add event listener to update the display whenever localStorage changes
+  window.addEventListener('storage', () => {
+    displayBooks(retrieveBooksFromStorage());
+  });
 });

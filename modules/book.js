@@ -14,9 +14,11 @@ class Book {
 
   // Function to remove a book from the collection
   static removeBook(title, books) {
-    const updatedBooks = books.filter((book) => book.title !== title);
-    saveBooksToStorage(updatedBooks);
-    return updatedBooks;
+    const index = books.findIndex((book) => book.title === title);
+    if (index !== -1) {
+      books.splice(index, 1);
+      saveBooksToStorage(books);
+    }
   }
 }
 
