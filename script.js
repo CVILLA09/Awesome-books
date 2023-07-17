@@ -77,5 +77,40 @@ form.addEventListener('submit', (event) => {
   document.getElementById('author').value = '';
 });
 
-// Display the books when the page loads
-window.onload = () => myBooks.displayBooks();
+// Function to show a section and hide the others
+function showSection(sectionId) {
+  // Select all sections
+  const sections = document.querySelectorAll('section');
+
+  // Hide all sections
+  sections.forEach((section) => {
+    section.style.display = 'none'; // Use inline styles to hide the sections
+  });
+
+  // Show the section with the given id
+  const sectionToShow = document.getElementById(sectionId);
+  sectionToShow.style.display = 'block'; // Use inline styles to show the section
+}
+
+// Display the navigation links when clicked
+
+// Select all navigation links
+const navLinks = document.querySelectorAll('.nav-link');
+
+// Add event listeners to the navigation links
+navLinks.forEach((link) => {
+  link.addEventListener('click', (event) => {
+    // Prevent the default action
+    event.preventDefault();
+
+    // Show the section that corresponds to the clicked link
+    const sectionId = event.target.getAttribute('data-section');
+    showSection(sectionId);
+  });
+});
+
+// Display the books and the first section when the page loads
+window.onload = () => {
+  myBooks.displayBooks();
+  showSection('main-container'); // Show the first section
+};
