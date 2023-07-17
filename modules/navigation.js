@@ -23,4 +23,4 @@ const handleNavigation = (event) => {
   event.target.style.color = 'blue'; // Change color to blue
 };
 
-export { handleNavigation };
+export default handleNavigation;

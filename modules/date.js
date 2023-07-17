@@ -1,3 +1,4 @@
+/* global luxon */
 // Function to display the date
 const displayDate = () => {
   const now = luxon.DateTime.now();

@@ -27,4 +27,4 @@ const displayBooks = (books) => {
   });
 };
 
-export { displayBooks };
+export default displayBooks;
