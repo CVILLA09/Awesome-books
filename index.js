@@ -2,7 +2,7 @@ import Book from './modules/book.js';
 import { saveBooksToStorage, retrieveBooksFromStorage } from './modules/storage.js';
 import displayBooks from './modules/display.js';
 import handleNavigation from './modules/navigation.js';
-import { displayDate } from './modules/date.js';
+import displayDate from './modules/date.js';
 
 document.addEventListener('DOMContentLoaded', () => {
   // Declare booksCollection as an empty array

@@ -6,4 +6,4 @@ const displayDate = () => {
   dateElement.textContent = `TIME: ${now.toLocaleString(luxon.DateTime.DATETIME_MED)}`;
 };
 
-export { displayDate };
+export default displayDate;
