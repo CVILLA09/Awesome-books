@@ -85,7 +85,7 @@ Clone this repository to your desired folder:
 
 ```sh
   cd my-folder
-  git clone git@github.com:thasipablo/awesome_books.git
+  git clone git@github.com:CVILLA09/Awesome-books.git
   npm init -y
 ```
 
@@ -113,15 +113,15 @@ To run tests, run the following command:
 
 👤 **Author 1**
 
-- GitHub: [@thasipablo](https://github.com/thasipablo)
-- Twitter: [@thasipablo_](https://twitter.com/thasipablo_)
-- LinkedIn: [thasipablo](https://linkedin.com/in/thasipablo)
-
-👤 **Author 2**
-
 - GitHub: [@CVILLA09](https://github.com/CVILLA09)
 - Twitter: [@cvillevir](https://twitter.com/cvillevir)
 - LinkedIn: [cristianvilla](https://www.linkedin.com/in/cristian-villa-5b518127b/)
+
+👤 **Author 2**
+
+- GitHub: [@thasipablo](https://github.com/thasipablo)
+- Twitter: [@thasipablo_](https://twitter.com/thasipablo_)
+- LinkedIn: [thasipablo](https://linkedin.com/in/thasipablo)
 
 <!-- CONTRIBUTING -->
 
