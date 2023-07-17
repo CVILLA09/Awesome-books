@@ -2,7 +2,7 @@
 
 <div align="center">
 
-  <h1><b>Welcome to our project!<br/> Awesome Books</b></h1>
+  <h1><b>Welcome to our project! 🌟<br/> Awesome Books 📚</b></h1>
 
 </div>
   
