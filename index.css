@@ -12,6 +12,7 @@ header {
   padding: 20px;
   margin: 0;
   margin-top: 1vh;
+  margin-bottom: 1vh;
   width: 90%;
   height: 4vh;
   font-size: 30px;
@@ -53,6 +54,16 @@ nav {
 .separator {
   height: auto;
   font-weight: bolder;
+}
+
+.date {
+  position: fixed;
+  top: 0;
+  right: 0;
+  margin-top: 12vh;
+  margin-right: 4vw;
+  font-size: 20px;
+  font-weight: bold;
 }
 
 .main-container {
@@ -135,15 +146,15 @@ nav {
 .book-form input {
   margin: 10px 0;
   border: 5px solid black;
-  padding: 5px;
+  padding: 10px;
   width: 40vw;
   height: 3vh;
-  font-size: 20px;
+  font-size: 25px;
   font-weight: bold;
 }
 
 .book-form ::placeholder {
-  font-size: 20px;
+  font-size: 25px;
   font-weight: bold;
 }
 
@@ -153,7 +164,7 @@ nav {
   align-items: center;
   border: 5px solid black;
   border-radius: 10px;
-  padding: 5px 10px;
+  padding: 10px;
   margin-top: 10px;
   box-shadow: 2px 2px 2px gray;
   width: 6.6vw;
