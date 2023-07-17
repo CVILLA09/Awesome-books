@@ -58,10 +58,10 @@ nav {
 
 .date {
   position: fixed;
-  top: 3;
+  top: 0;
   right: 0;
-  margin-top: 6vh;
-  margin-right: 5vw;
+  margin-top: 12vh;
+  margin-right: 4vw;
   font-size: 20px;
   font-weight: bold;
 }
