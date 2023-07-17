@@ -64,7 +64,7 @@
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-- [Live Demo](https://thasipablo.github.io/)
+- [This project is not live yet.]()
 
 <!-- GETTING STARTED -->
 
